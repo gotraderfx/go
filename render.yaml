@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ea-cloud-dashboard-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node demo-server.js
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
